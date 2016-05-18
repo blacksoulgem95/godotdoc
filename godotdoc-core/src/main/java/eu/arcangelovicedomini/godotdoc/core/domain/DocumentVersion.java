@@ -19,17 +19,17 @@ import javax.persistence.TemporalType;
 public class DocumentVersion {
 
 	@Id
-	@Column(name = "DOCUMENT_VERSION_ID")
+	@Column(name = "ID")
 	@GeneratedValue(generator = "documentVersionGenerator", strategy = GenerationType.SEQUENCE)
 	@SequenceGenerator(name = "documentVersionGenerator", sequenceName = "S_DOCUMENT_VERSION")
-	private Long documentVersionId;
+	private Long id;
 	
-	public Long getDocumentVersionId() {
-		return documentVersionId;
+	public Long getId() {
+		return id;
 	}
 	
-	public void setDocumentVersionId(Long documentVersionId) {
-		this.documentVersionId = documentVersionId;
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 	@ManyToOne(optional = false)

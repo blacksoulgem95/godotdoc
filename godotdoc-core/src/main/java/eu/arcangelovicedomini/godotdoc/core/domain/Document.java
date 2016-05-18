@@ -18,15 +18,15 @@ public class Document {
 	@Id
 	@GeneratedValue(generator = "documentGenerator", strategy = GenerationType.SEQUENCE)
 	@SequenceGenerator(name = "documentGenerator", sequenceName = "S_DOCUMENT")
-	@Column(name = "DOCUMENT_ID")
-	private Long documentId;
+	@Column(name = "ID")
+	private Long id;
 
-	public Long getDocumentId() {
-		return documentId;
+	public Long getId() {
+		return id;
 	}
 
-	public void setDocumentId(Long documentId) {
-		this.documentId = documentId;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	@Column(name = "DOCUMENT_TITLE")
